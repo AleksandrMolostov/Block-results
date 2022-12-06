@@ -4,7 +4,12 @@
 // старте выполнения алгоритма. При решении не рекомендуется пользоваться 
 // коллекциями, лучше обойтись исключительно массивами.
 
-string[] array = AskArray();
+// Примеры:
+// [“Hello”, “2”, “world”, “:-)”] → [“2”, “:-)”]
+// [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
+// [“Russia”, “Denmark”, “Kazan”] → []
+
+string[] array = FirstArray();
 string[] result = FindLessThan(array, 3);
 Console.WriteLine($"[{string.Join(", ", array)}] -> [{string.Join(", ", result)}]");
 
@@ -33,7 +38,7 @@ int CountLessThan(string[] input, int n) {
     return count;
 }
 
-string[] AskArray() {
+string[] FirstArray() {
     Console.Write("Введите значения через пробел: ");
     return Console.ReadLine().Split(" ");
 }
